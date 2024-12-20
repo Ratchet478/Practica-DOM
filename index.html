@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica DOM: Elementos dinamicos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg" alt="Logo PCComponentes"  width="138" height="48"/>
+    </div>
+
+    <!-- Categorías -->
+    <div class="menu">
+      <i class="fas fa-bars"></i>
+      <a href="#">Todas las categorías</a>
+    </div>
+
+    <!-- Buscador -->
+    <div class="search-bar">
+      <select>
+        <option value="all">Todo el catálogo</option>
+      </select>
+      <input type="text" placeholder="Buscar" />
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Cuenta y Cesta -->
+    <div class="user-cart">
+      <a href="#" class="account">
+        <i class="fas fa-user"></i> Mi cuenta
+      </a>
+      <a href="#" class="cart">
+        <i class="fas fa-shopping-cart"></i> Mi cesta <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+  <div class="container">
+    <!-- Sidebar con filtros -->
+    <aside class="filters">
+      <h3>Filtros</h3>
+      
+      <!-- Categorías -->
+      <div class="filter-section">
+        <h4>Categorías</h4>
+        <ul>
+          <li><input type="checkbox" id="cpu"> <label for="cpu">Procesadores</label></li>
+          <li><input type="checkbox" id="gpu"> <label for="gpu">Tarjetas Gráficas</label></li>
+          <li><input type="checkbox" id="ram"> <label for="ram">Memoria RAM</label></li>
+          <li><input type="checkbox" id="motherboard"> <label for="motherboard">Placas Base</label></li>
+        </ul>
+      </div>
+
+      <!-- Rango de precio -->
+      <div class="filter-section">
+        <h4>Precio</h4>
+        <input type="range" min="0" max="3000" step="50" id="priceRange">
+        <div class="price-inputs">
+          <input type="number" id="minPrice" placeholder="Min €">
+          <input type="number" id="maxPrice" placeholder="Max €">
+        </div>
+      </div>
+
+      <!-- Marcas -->
+      <div class="filter-section">
+        <h4>Marcas</h4>
+        <ul>
+          <li><input type="checkbox" id="amd"> <label for="amd">AMD</label></li>
+          <li><input type="checkbox" id="intel"> <label for="intel">Intel</label></li>
+          <li><input type="checkbox" id="nvidia"> <label for="nvidia">NVIDIA</label></li>
+          <li><input type="checkbox" id="asus"> <label for="asus">ASUS</label></li>
+        </ul>
+      </div>
+
+      <!-- Características específicas -->
+      <div class="filter-section">
+        <h4>Características</h4>
+        <ul>
+          <li><input type="checkbox" id="gaming"> <label for="gaming">Gaming</label></li>
+          <li><input type="checkbox" id="professional"> <label for="professional">Profesional</label></li>
+          <li><input type="checkbox" id="rgb"> <label for="rgb">RGB</label></li>
+        </ul>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="filter-buttons">
+        <button class="apply-filters">Aplicar Filtros</button>
+        <button class="clear-filters">Limpiar Filtros</button>
+      </div>
+    </aside>
+    <main class="products-grid">
+    </main>
+</body>
+<script type="module" src="main.js"></script>
+</html>
